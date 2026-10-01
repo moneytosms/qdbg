@@ -1,0 +1,26 @@
+[project]
+name = "qdbg"
+version = "0.1.0"
+description = "Step-through debugger for quantum circuits"
+readme = "README.md"
+authors = [
+    { name = "Srimoneyshankar Ajith", email = "moneytosms@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.5.3",
+    "textual>=8.2.8",
+]
+
+[project.scripts]
+qdbg = "qdbg:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.9",
+]
